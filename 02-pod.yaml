@@ -4,7 +4,7 @@ metadata:
   name: Pod-demo
   labels:
     project: roboshop
-    purpose: demo
+    purpose: demo-nginx
 spec:
   containers:
   - name: nginx
