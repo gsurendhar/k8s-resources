@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: labels
+  labels:
+    project: roboshop
+    environment: dev
+  annotations:
+    description: "this pod is created to demonstrate pod annotations"
+    jenkins: "https://jenkins.gonela.site/build/job/roboshop-catalogue/3"
+spec:
+  containers:
+  - name: labels-nginx
+    image: nginx
