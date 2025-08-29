@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: labels
+  labels:
+    project: roboshop
+    environment: dev
+  annotations:
+    description: "this pod is created to demonstrate pod annotations"
+    jenkins: "https://jenkins.gonela.site/build/job/roboshop-catalogue/3"
+spec:
+  containers:
+  - name: labels-nginx
+    image: nginx
+    resources:
+      requests: # soft limit (up to this)
+        memory: "64Mi"
+        cpu: "100m"
+      limits:   # hard limit (but not exceed to this)
+        memory: "1258Mi"
+        cpu: "150m" 
