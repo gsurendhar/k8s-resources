@@ -17,7 +17,7 @@ spec:
    # This is the pod definition
   template:
     metadata:
-      name: rs-demo
+      name: rs-demo # error need to find while applying
       labels:      # pod labels should match with selector matchLabels, then only replicas can be created
         project: roboshop
         purpose: rs-demo
