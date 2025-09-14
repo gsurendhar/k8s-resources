@@ -11,4 +11,4 @@ spec:
     image: nginx
     envForm:
     - configMapRef:            
-      name: configmap-demo     # this is from 08-ConfigMap.yaml name
+        name: configmap-demo     # this is from 08-ConfigMap.yaml name
