@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: labels
+  name: resources-limiting
   labels:
     project: roboshop
     environment: dev
