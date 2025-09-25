@@ -1,0 +1,24 @@
+# this is a network policy to mongodb is Allowing traffic from catalogue 
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: mongodb-accept-catalogue
+  namespace: roboshop
+
+spec:
+  podSelector:
+    matchLabels:
+      tier: database
+      component: mongodb
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          component: catalogue
+          tier: app
+          project: roboshop
+    ports:
+    - protocol: TCP
+      port: 27017     
